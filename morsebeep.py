@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 import time
  
-trig=10#GPIO编号
+trig=10 #GPIO编号
  
 def init():
     GPIO.setwarnings(False)
@@ -62,7 +62,7 @@ def MorseTa():
   
 def MorseCode(txt):
     if txt.isspace():
-        time.sleep(t*7)#单词间隔，中断7t秒
+        time.sleep(t*7) #单词间隔，中断7t秒
     else:
         txt = txt.upper()
         if txt in CODE.keys():
@@ -82,7 +82,7 @@ def Morse_input():
         else:
             for s in list(n):
                 MorseCode(s)
-                time.sleep(t*3)#字符间隔，中断3t秒
+                time.sleep(t*3) #字符间隔，中断3t秒
 
 
 if __name__ == "__main__":
